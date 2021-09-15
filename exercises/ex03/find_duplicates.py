@@ -18,6 +18,6 @@ while n < len(searched_word):
     n = n + 1
 
 if success == 0:
-    print("False")
+    print("Found duplicate: False")
 else:
-    print("True")
+    print("Found duplicate: True")
