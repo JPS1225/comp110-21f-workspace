@@ -13,6 +13,7 @@ game_win: int = 0
 
 
 def main() -> None:
+    """The main function that runs the program."""
     global points
     play_again: str = "Yes"
     greet()
