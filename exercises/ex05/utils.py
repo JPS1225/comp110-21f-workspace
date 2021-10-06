@@ -31,7 +31,7 @@ def sub(haystack: list[int], l1: int, l2: int) -> list[int]:
     return output
 
 
-def conact(xs1: list[int], xs2: list[int]) -> list[int]:
+def concat(xs1: list[int], xs2: list[int]) -> list[int]:
     """Makes a ne list of integers that has the contents of two given lists of integers."""
     output: list[int] = []
     output = xs1 + xs2
