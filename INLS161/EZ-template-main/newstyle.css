@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: large;
+  background-color: tan;  /* Background color of page. Optimal is to match color on line 65  */
+  text-align: center;     /* Center all text on page  */
+  }
+
+.center {                 /* Centers any image (in html file) with img class center: <img class="center" src="image.jpg" alt="My Image"> */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+img {                    /* Makes image fit container and resize at various browser sizes   */
+  max-width: 100%;
+  max-height: 100%;
+  display: block;        /* removes extra space below image */
+  }
+   
+article {
+  margin:3% 5% 5% 10%;
+  background-color: #F4E8DD;
+  padding: 3%;
+  border-radius: 5px;
+  }
+
+footer {                 /* Footer formatting. HTML page must have this below article: <footer> content... </footer>   */ 
+  margin: 3% 5% 5% 10%;
+  background-color: #151515; 
+  padding: 0% 0% 0% 3%;
+  border-radius: 5px;
+  color: white;
+  }
+  
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #151515;    /* Color of top navigation bar */
+  }
+
+ul.topnav li {
+  float: left;
+  }
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+
+ul.topnav li a:hover:not(.active) {
+  color: black;
+  background-color: wheat;      /* Color of tab on on top navigation bar with mouse-over hover */
+  }  
+
+ul.topnav li a.active {
+  color: black;
+  background-color: tan;      /* Color of your active tab on the navigation bar. Match or coordinate with body background color on line 5  */
+  }
+
+ul.topnav li.right {
+  float: right;
+  }
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right,
+  ul.topnav li {float: none;}
+}
