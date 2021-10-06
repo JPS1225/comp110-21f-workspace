@@ -4,7 +4,7 @@ __author__ = "730312274"
 
 from exercises.ex05.utils import only_evens
 from exercises.ex05.utils import sub
-from exercises.ex05.utils import contact
+from exercises.ex05.utils import conact
 
 
 # Testing only_evens
@@ -108,53 +108,53 @@ def test_contact_standard() -> None:
     """Tests contact can combine two lists standard."""
     xs1: list[int] = [10, 20, 30]
     xs2: list[int] = [40, 50, 60]
-    assert contact(xs1, xs2) == [10, 20, 30, 40, 50, 60]
+    assert conact(xs1, xs2) == [10, 20, 30, 40, 50, 60]
 
 
 def test_contact_both_empty() -> None:
     """Tests contact produces an empty list when combining two empty lists."""
     xs1: list[int] = []
     xs2: list[int] = []
-    assert contact(xs1, xs2) == []
+    assert conact(xs1, xs2) == []
 
 
 def test_contact_first_empty() -> None:
     """Tests contact when the first list is empty."""
     xs1: list[int] = []
     xs2: list[int] = [40, 50, 60]
-    assert contact(xs1, xs2) == [40, 50, 60]
+    assert conact(xs1, xs2) == [40, 50, 60]
 
 
 def test_contact_second_empty() -> None:
     """Tests contact when the second list is empty."""
     xs1: list[int] = [10, 20, 30]
     xs2: list[int] = []
-    assert contact(xs1, xs2) == [10, 20, 30]
+    assert conact(xs1, xs2) == [10, 20, 30]
 
 
 def test_contact_order() -> None:
     """Tests contact to ensure order is maintained when combining."""
     xs1: list[int] = [30, 10, 20]
     xs2: list[int] = [60, 40, 50]
-    assert contact(xs1, xs2) == [30, 10, 20, 60, 40, 50]
+    assert conact(xs1, xs2) == [30, 10, 20, 60, 40, 50]
 
 
 def test_contact_first_long() -> None:
     """Tests contact to ensure it can combine when first list is longer than second."""
     xs1: list[int] = [10, 20, 30, 40]
     xs2: list[int] = [50, 60, 70]
-    assert contact(xs1, xs2) == [10, 20, 30, 40, 50, 60, 70]
+    assert conact(xs1, xs2) == [10, 20, 30, 40, 50, 60, 70]
 
 
 def test_contact_second_long() -> None:
     """Tests contact to ensure it can combine when second list is longer than first."""
     xs1: list[int] = [10, 20, 30]
     xs2: list[int] = [40, 50, 60, 70]
-    assert contact(xs1, xs2) == [10, 20, 30, 40, 50, 60, 70]
+    assert conact(xs1, xs2) == [10, 20, 30, 40, 50, 60, 70]
 
 
 def test_duplicate_items() -> None:
     """Tests contact to ensure duplicate items acorss lists show up separately."""
     xs1: list[int] = [10, 20, 30]
     xs2: list[int] = [20, 30, 40]
-    assert contact(xs1, xs2) == [10, 20, 30, 20, 30, 40]
+    assert conact(xs1, xs2) == [10, 20, 30, 20, 30, 40]
