@@ -43,10 +43,13 @@ def head(full_table: dict[str, list[str]], result_size: int) -> dict[str, list[s
     for key in full_table:
         holding_list: list[str] = []
         i = 0
-        while i < result_size:
-            holding_list.append(full_table[key][i])
-            i += 1
-        result[key] = holding_list
+        if result_size < len(full_table):
+            while i < result_size:
+                holding_list.append(full_table[key][i])
+                i += 1
+            result[key] = holding_list
+        else:
+            result = full_table
     return result
 
 
